@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sawza | Tradition x Future • Textile, Fashion & Accessories">
     <title>Sawza | Tradition x Future • Textile, Fashion & Accessories </title>
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <nav>
+    <link rel="icon" href="assets/iconsawza.png" type="image/png" />
+  </head>
 
-    </nav>
-    <section id="home">
-        <h1>Hi, <span id="namayangdiinput"></span></h1>
-        <p>Selamat datang!</p>
-    </section>
-    <section id="ourgallery">
+  <body>
+    <div class="nav-container">
+      <div class="nav-header">
+        <div class="logo">
+            <a href="index.html"><img src="assets/logo-sawza-strip.png" alt="Sawza Logo" /></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+      </div>
+    </div>
 
-    </section>
-    <section id="contactus">
+    <div class="main-container">
+      <section class="banner">
+        <div class="home-banner">
+            <div class="slide">
+                <img src="assets/1.jpg" class="slide-banner">
+                <img src="assets/2.jpg" class="slide-banner">
+            </div>
+            <div class="banner-text">
+              <h1 class="banner-text-h">Hi, <span id="nameUser"></span>!</h1>
+              <p class="banner-text-p">Kemajuan teknologi tidak menghilangkan budaya dan tradisi..</p>
+              <button class="button" onclick="seeMorebutton()">Lanjut baca</button>
+            </div>
+        </div>
+      </section>
+      
+
+      <section id="gallery">
+      
+      </section>
+
+      <section id="contact">
         <h2>Hubungi kami</h2>
         <form id="contact-form">
-            <input type="text" id="name" name="name" placeholder="Nama">
-            <input type="email" id="email" name="email" placeholder="Email">
-            <input type="number" id="phone" name="phone" placeholder="Nomor Telepon">
-            <textarea id="message" name="message" placeholder="Pesan"></textarea>
-            <button type="submit">Kirim</button>
+          <input type="text" id="name" name="name" placeholder="Nama">
+          <input type="email" id="email" name="email" placeholder="Email">
+          <input type="number" id="phone" name="phone" placeholder="Nomor Telepon">
+          <textarea id="message" name="message" placeholder="Pesan"></textarea>
+          <button type="submit">Kirim</button>
         </form>
-    </section>
+      </section>
+    </div>
+
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
