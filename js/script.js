@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const form = document.getElementById('contact-form');
   const nameInput = document.getElementById('name');
-  const youAreInputs = document.getElementsByName('you-are');
+  const youAreInput = document.getElementById('you-are');
   const emailInput = document.getElementById('email');
   const phoneInput = document.getElementById('phone');
-  const appointmentInput = document.getElementById('appointment');
+  const appointmentInput = document.getElementsByName('appointment');
   const scheduleInput = document.getElementById('schedule');
   const messageInput = document.getElementById('message');
 
@@ -26,6 +26,86 @@ document.addEventListener('DOMContentLoaded', function () {
   const outputSchedule = document.getElementById('output-schedule');
   const outputMessage = document.getElementById('output-message');
   const currentTimeElement = document.getElementById('current-time');
+
+
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    let valid = true;
+    let errorMessage = '';
+
+    if (nameInput.value.trim() === '') {
+        valid = false;
+        errorMessage += 'Name required.\n';
+    }
+
+    if (youAreInput.value.trim() === '..') {
+      valid = false;
+      errorMessage += 'Who are you? Select You Are required.\n';
+  }
+
+    if (emailInput.value.trim() === '') {
+        valid = false;
+        errorMessage += 'Email required.\n';
+    }
+
+    if (phoneInput.value.trim() === '') {
+        valid = false;
+        errorMessage += 'Phone required.\n';
+    }
+
+    let appointmentSelected = false;
+    for (let i = 0; i < appointmentInput.length; i++) {
+        if (appointmentInput[i].checked) {
+            appointmentSelected = true;
+            break;
+        }
+    }
+    if (!appointmentSelected) {
+        valid = false;
+        errorMessage += 'Appointment required.\n';
+    }
+
+    if (!scheduleInput.value) {
+        valid = false;
+        errorMessage += 'Schedule required.\n';
+    }
+
+    if (messageInput.value.trim() === '') {
+        valid = false;
+        errorMessage += 'Message required.\n';
+    }
+
+    if (valid) {
+        nameUser.textContent = nameInput.value;
+
+        const currentTime = new Date().toLocaleString();
+        currentTimeElement.textContent = currentTime;
+
+        outputName.textContent = nameInput.value;
+        outputYouAre.textContent = youAreInput.value; 
+        outputEmail.textContent = emailInput.value;
+        outputPhone.textContent = phoneInput.value;
+        let appointmentValue = '';
+        for (let i = 0; i < appointmentInput.length; i++) {
+            if (appointmentInput[i].checked) {
+                appointmentValue = appointmentInput[i].value;
+                break;
+            }
+        }
+        outputAppointment.textContent = appointmentValue;
+        outputSchedule.textContent = scheduleInput.value;
+        outputMessage.textContent = messageInput.value;
+
+        form.reset();
+    } else {
+        alert(errorMessage);
+    }
+  });
+
+
+
 });
 
 function smoothScroll(target) {
