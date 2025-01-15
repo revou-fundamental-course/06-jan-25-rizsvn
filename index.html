@@ -28,15 +28,15 @@
 
     <div class="main-container">
       <section class="banner" id="home">
-        <div class="home-banner">
+        <div class="home-banner" id="home-banner">
             <div class="slide">
-                <img src="assets/1.jpg" class="slide-banner">
+                <img src="assets/1.jpg" class="slide-banner active">
                 <img src="assets/3.jpg" class="slide-banner">
             </div>
             <div class="banner-text">
               <h1 class="banner-text-h">Hi, <span id="nameUser"></span>!</h1>
               <p class="banner-text-p">Kemajuan teknologi tidak menghilangkan budaya dan tradisi..</p>
-              <button class="button" onclick="seeMorebutton()">Selengkapnya</button>
+              <button class="button" id="seeMoreBtn" onclick="seeMoreButton()">Selengkapnya</button>
             </div>
         </div>
       </section>
@@ -95,7 +95,7 @@
             <div class="form-group">
               <label for="you-are">You Are: *</label>
               <select id="you-are" name="you-are" required>
-                <option disabled selected class="disabled-selected">You are ..</option>
+                <option disabled selected class="disabled-selected">..</option>
                 <option value="Personal">Personal</option>
                 <option value="Company">Company</option>
               </select>
