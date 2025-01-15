@@ -27,7 +27,7 @@
     </div>
 
     <div class="main-container">
-      <section class="banner">
+      <section class="banner" id="home">
         <div class="home-banner">
             <div class="slide">
                 <img src="assets/1.jpg" class="slide-banner">
@@ -42,7 +42,7 @@
       </section>
       
 
-      <section class="find-us">
+      <section class="find-us" id="find-us">
         <h2>Find Us</h2>
         <div class="locations">
           <div class="location">
@@ -84,16 +84,67 @@
         </div>
       </section>
 
-      <section id="contact">
-        <h2>Hubungi kami</h2>
-        <form id="contact-form">
-          <input type="text" id="name" name="name" placeholder="Nama">
-          <input type="email" id="email" name="email" placeholder="Email">
-          <input type="number" id="phone" name="phone" placeholder="Nomor Telepon">
-          <textarea id="message" name="message" placeholder="Pesan"></textarea>
-          <button type="submit">Kirim</button>
-        </form>
+      <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name: *</label>
+              <input type="text" id="name" name="name" placeholder="Your Personal or Company Name" required>
+            </div>
+            <div class="form-group">
+              <label for="you-are">You Are: *</label>
+              <select id="you-are" name="you-are" required>
+                <option disabled selected class="disabled-selected">You are ..</option>
+                <option value="Personal">Personal</option>
+                <option value="Company">Company</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="email">Email: *</label>
+              <input type="email" id="email" name="email" placeholder="your@mail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone: *</label>
+              <input type="number" id="phone" name="phone" placeholder="6281234567890" required>
+            </div>
+            <div class="form-group appointment">
+              <label>Appointment: *</label>
+              <input type="radio" id="request" name="appointment" value="Request" required>
+              <label for="request">Request</label>
+              <input type="radio" id="not-yet" name="appointment" value="Not-Yet">
+              <label for="not-yet">Not Yet</label>
+            </div>
+            <div class="form-group">
+              <label for="schedule">Schedule: <span class="optional">(optional)</span></label>
+              <input type="date" id="schedule" name="schedule">
+            </div>
+            <div class="form-group">
+              <label for="message">Message: *</label>
+              <textarea id="message" name="message" placeholder="Your message description" required></textarea>
+            </div>
+            <div class="submit-button">
+              <p>*By clicking submit you agree to the Terms and Conditions.</p>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+          <div class="contact-output">
+            <h4>Your ticket</h4>
+            <h5>Description</h5>
+            <p><strong>Contact time:</strong> <span id="contact-time"></span></p>
+            <p><strong>Name:</strong> <span id="output-name"></span></p>
+            <p><strong>You Are:</strong> <span id="output-you-are"></span></p>
+            <p><strong>Email:</strong> <span id="output-email"></span></p>
+            <p><strong>Phone Number:</strong> <span id="output-phone"></span></p>
+            <p><strong>Appointment:</strong> <span id="output-appointment"></span></p>
+            <p><strong>Schedule:</strong> <span id="output-schedule"></span></p>
+            <p><strong>Message:</strong> <span id="output-message"></span></p>
+            <p><strong>*</strong> <span id="output-note"></span></p>
+            <h6><strong>Thank you for contacting us!</strong></h6>
+          </div>
+        </div>
       </section>
+      
     </div>
 
     <script src="js/script.js"></script>

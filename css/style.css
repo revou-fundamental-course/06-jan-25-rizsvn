@@ -156,7 +156,7 @@ body {
 .find-us {
   text-align: center;
   padding: 2em 1em;
-  background-color: #bfbfbf;
+  background-color: #fff;
   border-radius: 8px;
 }
 
@@ -196,8 +196,8 @@ body {
 }
 
 .circle img {
-  width: 100%;
-  height: 100%;
+  width: 102%;
+  height: 102%;
   object-fit: cover;
 }
 
@@ -216,4 +216,187 @@ body {
   font-size: 0.8rem;
   color: #404040;
   transform: translateY(-0.7rem);
+}
+
+.contact {
+  padding: 2em;
+  background-color: #404040;
+  color: #fff;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #fff;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.contact-container form {
+  flex: 1 1 45%;
+  padding: 1em;
+  background-color: transparent;
+  border: none;
+}
+
+.contact-output {
+  flex: 1 1 45%;
+  padding: 1em;
+  color: #404040bf;
+  background-color: #bfbfbfbf;
+  border: 1px solid #80808080;
+  border-radius: 8px;
+  min-width: 300px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.form-group label {
+  width: 150px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.form-group label .optional {
+  font-size: 12px;
+  vertical-align: super;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group textarea {
+  flex: 1;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #bfbfbfbf;
+  border-radius: 4px;
+  background-color: #80808080;
+  color: #bfbfbfbf;
+  font-size: 1em;
+}
+
+.form-group select {
+  flex: 1;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #bfbfbfbf;
+  border-radius: 4px;
+  background-color: #80808080;
+  color: #bfbfbfbf;
+  font-size: 1em;
+}
+
+.form-group select .disabled-selected {
+  color: #80808080;
+}
+
+.form-group select option {
+  color: #404040;
+}
+
+.form-group select option:hover,
+.form-group select option:focus {
+  background-color: #404040;
+  color: #bfbfbf;
+}
+
+::placeholder {
+  color: #bfbfbfbf;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #bfbfbfbf;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-group.appointment {
+  display: flex;
+  align-items: center;
+  gap: 0.1em;
+  font-size: 1rem;
+}
+
+.appointment input[type="radio"] {
+  width: auto;
+  height: auto;
+  margin-left: 1em;
+  margin-right: 0.3em;
+  accent-color: #404040;
+}
+
+textarea {
+  resize: vertical;
+  grid-column: span 2;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-button p {
+  color: #bfbfbf;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 0px; 
+}
+
+button {
+  background-color: #fff;
+  color: #404040;
+  cursor: pointer;
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #bfbfbf;
+}
+
+.contact-output h4,
+.contact-output h5,
+.contact-output h6 {
+  color: #404040bf;
+  text-align: center;
+}
+
+.contact-output h5 {
+  transform: translateY(-1em);  
+}
+
+.contact-output p {
+  margin-bottom: 1em;
+  font-size: 0.9em;
+  color: #404040bf;
+}
+
+.contact-output strong {
+  color: #404040;
 }
