@@ -10,37 +10,40 @@
   </head>
 
   <body>
+    <p class="nameUserSave"><span id="nameUserSave"></span></p>
     <div class="nav-container">
       <div class="nav-header">
         <div class="logo">
-            <a href="index.html"><img src="assets/logo-sawza-strip.png" alt="Sawza Logo" /></a>
+            <a href="#" onclick="loadContent('home')"><img src="assets/logo-sawza-strip.png" alt="Sawza Logo" /></a>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#" onclick="loadContent('home')">Home</a></li>
+                <li><a href="#" onclick="loadContent('about')">About Us</a></li>
+                <li><a href="#" onclick="loadContent('project')">Project</a></li>
+                <li><a href="#" id="seeCntct" onclick="seeContact()">Contact Us</a></li>
             </ul>
         </nav>
       </div>
     </div>
 
     <div class="main-container">
-      <section class="banner" id="home">
-        <div class="home-banner" id="home-banner">
+
+      <div class="content" id="content">
+        <section class="banner" id="home">
+          <div class="home-banner" id="home-banner">
             <div class="slide">
-                <img src="assets/1.jpg" class="slide-banner active">
-                <img src="assets/3.jpg" class="slide-banner">
+              <img src="assets/1.jpg" class="slide-banner active">
+              <img src="assets/3.jpg" class="slide-banner">
             </div>
             <div class="banner-text">
-              <h1 class="banner-text-h">Hi, <span id="nameUser"></span>!</h1>
-              <p class="banner-text-p">Kemajuan teknologi tidak menghilangkan budaya dan tradisi..</p>
+              <h1 class="banner-text-h">Hi, <span id="nameUser"></span>! Be a part of</h1>
+              <p class="banner-text-p">Weaving Tradition into The Future</p>
               <button class="button" id="seeMoreBtn" onclick="seeMoreButton()">Selengkapnya</button>
             </div>
-        </div>
-      </section>
-      
+          </div>
+        </section>        
+      </div>
 
       <section class="find-us" id="find-us">
         <h2>Find Us</h2>

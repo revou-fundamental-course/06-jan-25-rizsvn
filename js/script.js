@@ -1,13 +1,98 @@
-document.addEventListener('DOMContentLoaded', function () {
-  function replacename() {
-    let nameUser = prompt("To open this page, please enter your name first:");
-    document.getElementById("nameUser").innerHTML = nameUser;
-    document.getElementById("name").value = nameUser;
-  }
+function replacename() {
+  let nameUser1 = prompt("To open this page, please enter your name first:");
+  document.getElementById("nameUserSave").innerHTML = nameUser1;
+  document.getElementById("nameUser").innerHTML = nameUser1;
+  document.getElementById("name").value = nameUser1;
+}
+replacename();
+document.getElementById("nameUser").addEventListener("click", function () {
   replacename();
-  document.getElementById("nameUser").addEventListener("click", function () {
-    replacename();
-  });
+});
+
+const nameUserSaved = document.getElementById("nameUserSave").innerHTML;
+
+function loadContent(page) {
+  document.getElementById('content').classList.add('hide');
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', page + '.html');
+  xhr.onload = () => {
+    document.getElementById('content').innerHTML = xhr.responseText;
+    document.getElementById('content').classList.remove('hide');
+    document.getElementById("nameUser").innerHTML = document.getElementById("nameUserSave").innerHTML;
+    const seeMoreButton = document.getElementById("seeMoreBtn");
+    if (seeMoreButton) {
+      const handleSeeMoreClick = () => {
+        smoothScroll("find-us"); 
+      };
+      seeMoreButton.addEventListener("click", handleSeeMoreClick); 
+    }
+  };
+  xhr.send();
+}
+
+let slideIndex = 0;
+const slides = document.getElementsByClassName("slide-banner");
+
+function showSlides() {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove('active'); 
+  }
+
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1; 
+  }
+
+  slides[slideIndex - 1].classList.add('active'); 
+
+  setTimeout(showSlides, 3000); 
+}
+
+showSlides();
+
+function smoothScroll(target) {
+  const targetElement = document.getElementById(target);
+
+  if (!targetElement) {
+    console.error(`Element with ID "${target}" not found.`);
+    return; 
+  }
+
+  const targetPosition = targetElement.offsetTop;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const duration = 500;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const elapsed = currentTime - startTime; 
+    if (elapsed >= duration) {
+      window.scrollTo(0, targetPosition); 
+      return; 
+    }
+
+    const t = elapsed / duration;
+    const easedProgress = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+    window.scrollTo(0, startPosition + distance * easedProgress);
+    requestAnimationFrame(animation);
+  }
+
+  requestAnimationFrame(animation);
+}
+
+const seeMoreButton = document.getElementById("seeMoreBtn");
+seeMoreButton.addEventListener("click", () => {
+  smoothScroll("find-us"); 
+});
+
+const seeContact = document.getElementById("seeCntct");
+seeContact.addEventListener("click", () => {
+  smoothScroll("contact"); 
+});
+
+document.addEventListener('DOMContentLoaded', function () {
 
   const form = document.getElementById('contact-form');
   const nameInput = document.getElementById('name');
@@ -27,11 +112,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const outputMessage = document.getElementById('output-message');
   const currentTimeElement = document.getElementById('current-time');
 
-
-
   form.addEventListener('submit', function (event) {
     event.preventDefault();
-    
     let valid = true;
     let errorMessage = '';
 
@@ -78,6 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (valid) {
+        nameUserSave.textContent = nameInput.value;
         nameUser.textContent = nameInput.value;
 
         const currentTime = new Date().toLocaleString();
@@ -103,64 +186,4 @@ document.addEventListener('DOMContentLoaded', function () {
         alert(errorMessage);
     }
   });
-
-
-
 });
-
-function smoothScroll(target) {
-  const targetElement = document.getElementById(target);
-
-  if (!targetElement) {
-    console.error(`Element with ID "${target}" not found.`);
-    return; 
-  }
-
-  const targetPosition = targetElement.offsetTop;
-  const startPosition = window.pageYOffset;
-  const distance = targetPosition - startPosition;
-  const duration = 500; // Durasi scroll dalam milidetik
-  let startTime = null;
-
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    const elapsed = currentTime - startTime; 
-    if (elapsed >= duration) {
-      window.scrollTo(0, targetPosition); 
-      return; 
-    }
-
-    const t = elapsed / duration;
-    const easedProgress = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-
-    window.scrollTo(0, startPosition + distance * easedProgress);
-    requestAnimationFrame(animation);
-  }
-
-  requestAnimationFrame(animation);
-}
-
-const seeMoreButton = document.getElementById("seeMoreBtn");
-seeMoreButton.addEventListener("click", () => {
-  smoothScroll("find-us"); 
-});
-
-let slideIndex = 0;
-const slides = document.getElementsByClassName("slide-banner");
-
-function showSlides() {
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove('active'); 
-  }
-
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1; 
-  }
-
-  slides[slideIndex - 1].classList.add('active'); 
-
-  setTimeout(showSlides, 3000); 
-}
-
-showSlides();
