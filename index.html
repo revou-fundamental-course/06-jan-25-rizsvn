@@ -37,126 +37,126 @@
               <img src="assets/3.jpg" class="slide-banner">
             </div>
             <div class="banner-text">
-              <h1 class="banner-text-h">Hi, <span id="nameUser"></span>! Be a part of</h1>
-              <p class="banner-text-p">Weaving Tradition into The Future</p>
-              <button class="button" id="seeMoreBtn" onclick="seeMoreButton()">Selengkapnya</button>
+              <h1 class="banner-text-h">Hi, <span id="nameUser"></span>! <span class="hsub">Be a part of</span></h1>
+              <p class="banner-text-p">"Weaving Tradition into The Future"</p>
+              <button class="button" id="seeMoreBtn" onclick="seeMoreButton()">Get begin!</button>
             </div>
           </div>
-        </section>        
+        </section>
       </div>
-
-      <section class="find-us" id="find-us">
-        <h2>Find Us</h2>
-        <div class="locations">
-          <div class="location">
-            <div class="circle">
-              <a href="https://maps.app.goo.gl/2n33AceVYqBqxubc6">
-                <img src="assets/21.jpg" alt="pajagan">
-              </a>
+      <div class="content" id="content">
+        <section class="find-us" id="find-us">
+          <h2>Find Us</h2>
+          <div class="locations">
+            <div class="location">
+              <div class="circle">
+                <a href="https://maps.app.goo.gl/2n33AceVYqBqxubc6">
+                  <img src="assets/21.jpg" alt="pajagan">
+                </a>
+              </div>
+              <h3>Pajagan</h3>
+              <p>(Tasikmalaya)</p>
             </div>
-            <h3>Pajagan</h3>
-            <p>(Tasikmalaya)</p>
-          </div>
-          <div class="location">
-            <div class="circle">
-              <a href="https://maps.app.goo.gl/2n33AceVYqBqxubc6">
-                <img src="assets/5.jpg" alt="galeri">
-              </a>
-            </div>
-            <h3>Galeri</h3>
-            <p>(Tasikmalaya)</p>
-          </div>
-          <div class="location">
-            <div class="circle">
-              <a href="https://maps.app.goo.gl/2n33AceVYqBqxubc6">
-                <img src="assets/17.jpg" alt="bandung">
-              </a>
+            <div class="location">
+              <div class="circle">
+                <a href="https://maps.app.goo.gl/2n33AceVYqBqxubc6">
+                  <img src="assets/5.jpg" alt="galeri">
+                </a>
               </div>
               <h3>Galeri</h3>
-              <p>(Bandung)</p>
+              <p>(Tasikmalaya)</p>
             </div>
-          <div class="location">
-            <div class="circle">
-              <a href="https://maps.app.goo.gl/2n33AceVYqBqxubc6">
-                <img src="assets/19.jpg" alt="jakarta">
-              </a>
+            <div class="location">
+              <div class="circle">
+                <a href="https://maps.app.goo.gl/2n33AceVYqBqxubc6">
+                  <img src="assets/17.jpg" alt="bandung">
+                </a>
+                </div>
+                <h3>Galeri</h3>
+                <p>(Bandung)</p>
+              </div>
+            <div class="location">
+              <div class="circle">
+                <a href="https://maps.app.goo.gl/2n33AceVYqBqxubc6">
+                  <img src="assets/19.jpg" alt="jakarta">
+                </a>
+              </div>
+              <h3>Galeri</h3>
+              <p>(Jakarta)</p>
             </div>
-            <h3>Galeri</h3>
-            <p>(Jakarta)</p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-container">
-          <div class="contact-info">
-            <h4>We are on</h4>
-            <ul class="social-media">
-              <li><a href="#"><img src=""></im></a></li>
-              <li><a href="#"><img class="fa-brands fa-instagram"></img></a></li>
-              <li><a href="#"><img class="fa-brands fa-twitter"></img></a></li>
-              <li><a href="#"><img class="fa-brands fa-linkedin-in"></img></a></li>
-            </ul>
+        <section class="contact" id="contact">
+          <h2>Contact Us</h2>
+          <div class="contact-container">
+            <div class="contact-info">
+              <h4>We are on</h4>
+              <ul class="social-media">
+                <li><a href="#"><img src=""></im></a></li>
+                <li><a href="#"><img class="fa-brands fa-instagram"></img></a></li>
+                <li><a href="#"><img class="fa-brands fa-twitter"></img></a></li>
+                <li><a href="#"><img class="fa-brands fa-linkedin-in"></img></a></li>
+              </ul>
+            </div>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Name: *</label>
+                <input type="text" id="name" name="name" placeholder="Your Personal or Company Name" required>
+              </div>
+              <div class="form-group">
+                <label for="you-are">You Are: *</label>
+                <select id="you-are" name="you-are" required>
+                  <option disabled selected class="disabled-selected">..</option>
+                  <option value="Personal">Personal</option>
+                  <option value="Company">Company</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="email">Email: *</label>
+                <input type="email" id="email" name="email" placeholder="your@mail.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone: *</label>
+                <input type="number" id="phone" name="phone" placeholder="6281234567890" required>
+              </div>
+              <div class="form-group appointment">
+                <label>Appointment: *</label>
+                <input type="radio" id="request" name="appointment" value="Request" required>
+                <label for="request">Request</label>
+                <input type="radio" id="not-yet" name="appointment" value="Not-Yet">
+                <label for="not-yet">Not Yet</label>
+              </div>
+              <div class="form-group">
+                <label for="schedule">Schedule: <span class="optional">(optional)</span></label>
+                <input type="date" id="schedule" name="schedule">
+              </div>
+              <div class="form-group">
+                <label for="message">Message: *</label>
+                <textarea id="message" name="message" placeholder="Your message description" required></textarea>
+              </div>
+              <div class="submit-button">
+                <p>*By clicking submit you agree to the Terms and Conditions.</p>
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+            <div class="contact-output">
+              <h4>Your ticket</h4>
+              <h5>Description</h5>
+              <p><strong>Contact time:</strong> <span id="current-time"></span></p>
+              <p><strong>Name:</strong> <span id="output-name"></span></p>
+              <p><strong>You Are:</strong> <span id="output-you-are"></span></p>
+              <p><strong>Email:</strong> <span id="output-email"></span></p>
+              <p><strong>Phone Number:</strong> <span id="output-phone"></span></p>
+              <p><strong>Appointment:</strong> <span id="output-appointment"></span></p>
+              <p><strong>Schedule:</strong> <span id="output-schedule"></span></p>
+              <p><strong>Message:</strong> <span id="output-message"></span></p>
+              <p><strong>*</strong> <span id="output-note"></span></p>
+              <h6><strong>Thank you for contacting us!</strong></h6>
+            </div>
           </div>
-          <form id="contact-form">
-            <div class="form-group">
-              <label for="name">Name: *</label>
-              <input type="text" id="name" name="name" placeholder="Your Personal or Company Name" required>
-            </div>
-            <div class="form-group">
-              <label for="you-are">You Are: *</label>
-              <select id="you-are" name="you-are" required>
-                <option disabled selected class="disabled-selected">..</option>
-                <option value="Personal">Personal</option>
-                <option value="Company">Company</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="email">Email: *</label>
-              <input type="email" id="email" name="email" placeholder="your@mail.com" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone: *</label>
-              <input type="number" id="phone" name="phone" placeholder="6281234567890" required>
-            </div>
-            <div class="form-group appointment">
-              <label>Appointment: *</label>
-              <input type="radio" id="request" name="appointment" value="Request" required>
-              <label for="request">Request</label>
-              <input type="radio" id="not-yet" name="appointment" value="Not-Yet">
-              <label for="not-yet">Not Yet</label>
-            </div>
-            <div class="form-group">
-              <label for="schedule">Schedule: <span class="optional">(optional)</span></label>
-              <input type="date" id="schedule" name="schedule">
-            </div>
-            <div class="form-group">
-              <label for="message">Message: *</label>
-              <textarea id="message" name="message" placeholder="Your message description" required></textarea>
-            </div>
-            <div class="submit-button">
-              <p>*By clicking submit you agree to the Terms and Conditions.</p>
-              <button type="submit">Submit</button>
-            </div>
-          </form>
-          <div class="contact-output">
-            <h4>Your ticket</h4>
-            <h5>Description</h5>
-            <p><strong>Contact time:</strong> <span id="current-time"></span></p>
-            <p><strong>Name:</strong> <span id="output-name"></span></p>
-            <p><strong>You Are:</strong> <span id="output-you-are"></span></p>
-            <p><strong>Email:</strong> <span id="output-email"></span></p>
-            <p><strong>Phone Number:</strong> <span id="output-phone"></span></p>
-            <p><strong>Appointment:</strong> <span id="output-appointment"></span></p>
-            <p><strong>Schedule:</strong> <span id="output-schedule"></span></p>
-            <p><strong>Message:</strong> <span id="output-message"></span></p>
-            <p><strong>*</strong> <span id="output-note"></span></p>
-            <h6><strong>Thank you for contacting us!</strong></h6>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
 
     <footer>
       <div class="footer-container">

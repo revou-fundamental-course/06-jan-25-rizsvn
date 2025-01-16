@@ -149,6 +149,16 @@ div.nav-container div.nav-header nav p.nameUserSave span#nameUserSave {
   margin-bottom: 0px;
   padding-left: 20px;
   padding-right: 20px;
+  font-weight: 600;
+}
+
+#nameUser {
+  font-weight: 700;
+}
+
+.hsub {
+  font-size: 29px;
+  font-weight: 500;
 }
 
 .banner-text-p {
@@ -158,18 +168,18 @@ div.nav-container div.nav-header nav p.nameUserSave span#nameUserSave {
 
 .button {
   font-size: 17px;
-  color: white;
+  color: #ffffffbf;
   background-color: transparent;
   padding: 14px 30px;
   border-radius: 8px;
-  border: 2px;
+  border: 1px;
   border-style: solid;
-  border-color: white;
+  border-color: #ffffff80;
 }
 
 .button:hover {
-  color: #404040;
-  background-color: #bfbfbf;
+  color: #202020;
+  background-color: #bfbfbf80;
   border-color: transparent;
 }
 
