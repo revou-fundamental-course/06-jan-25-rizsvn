@@ -7,13 +7,6 @@ body {
   color: #bfbfbf;
 }
 
-#content {
-  transition: opacity 0.5s ease-in-out;
-}
-#content.hide {
-  opacity: 0;
-}
-
 .nav-container {
   background-image: linear-gradient(to bottom,#000000af, #00000050, #00000000);
   position: sticky;
@@ -25,6 +18,11 @@ body {
   width: 135px;
   height: 60px;
   object-fit: contain;
+}
+
+div.nav-container div.nav-header nav p.nameUserSave,
+div.nav-container div.nav-header nav p.nameUserSave span#nameUserSave {
+  display: none;
 }
 
 .nav-container ul {
@@ -87,6 +85,13 @@ body {
 .main-container {
   transform: translateY(-60px);
   padding-top: -60px;
+}
+
+#content {
+  transition: opacity 0.5s ease-in-out;
+}
+#content.hide {
+  opacity: 0;
 }
 
 .banner {
