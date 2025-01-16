@@ -11,6 +11,11 @@ document.getElementById("nameUser").addEventListener("click", function () {
 
 const nameUserSaved = document.getElementById("nameUserSave").innerHTML;
 
+function toggleMenu() {
+  const navMenu = document.querySelector('.nav-menu');
+  navMenu.classList.toggle('active');
+}
+
 function loadContent(page) {
   document.getElementById('content').classList.add('hide');
   const xhr = new XMLHttpRequest();
@@ -59,8 +64,9 @@ function smoothScroll(target) {
   }
 
   const targetPosition = targetElement.offsetTop;
+  const navContainerHeight = document.querySelector('.nav-container').offsetHeight;
   const startPosition = window.pageYOffset;
-  const distance = targetPosition - startPosition;
+  const distance = targetPosition - startPosition - navContainerHeight;
   const duration = 500;
   let startTime = null;
 
@@ -68,7 +74,7 @@ function smoothScroll(target) {
     if (startTime === null) startTime = currentTime;
     const elapsed = currentTime - startTime; 
     if (elapsed >= duration) {
-      window.scrollTo(0, targetPosition); 
+      window.scrollTo(0, targetPosition - navContainerHeight); 
       return; 
     }
 
