@@ -175,14 +175,14 @@ div.nav-container div.nav-header nav p.nameUserSave span#nameUserSave {
 
 .find-us {
   text-align: center;
-  padding: 2em 1em;
+  padding: 1.5em 1em;
   background-color: #fff;
   border-radius: 8px;
 }
 
 .find-us h2 {
   font-size: 2rem;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   color: #404040;
 }
 
@@ -239,18 +239,18 @@ div.nav-container div.nav-header nav p.nameUserSave span#nameUserSave {
 }
 
 .contact {
-  padding-top: 2em;
+  padding-top: 1.5em;
   padding-left: 2em;
   padding-right: 2em;
-  padding-bottom: 1em;
+  padding-bottom: 0em;
   background-color: #404040;
   color: #fff;
 }
 
 .contact h2 {
   text-align: center;
-  padding-top: 0.666em;
-  margin-bottom: 1.5em;
+  padding-top: 0.333em;
+  margin-bottom: 1em;
   color: #fff;
 }
 
@@ -261,15 +261,42 @@ div.nav-container div.nav-header nav p.nameUserSave span#nameUserSave {
   gap: 2em;
 }
 
+.contact-info {
+  flex: 1 1 20%;
+  padding: 1em;
+  color: #fff;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  min-width: 300px;
+}
+
+.social-media {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.social-media li {
+  margin: 0 0.5em;
+}
+
+.social-media a {
+  color: #fff;
+  font-size: 1.2em;
+}
 .contact-container form {
-  flex: 1 1 45%;
+  /* flex: 1 1 45%; */
+  flex: 1 1 20%;
   padding: 1em;
   background-color: transparent;
   border: none;
 }
 
 .contact-output {
-  flex: 1 1 45%;
+  /* flex: 1 1 45%; */
+  flex: 1 1 20%;
   padding: 1em;
   color: #404040;
   background-color: #dfdfdf;
